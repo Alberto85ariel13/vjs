@@ -1,7 +1,7 @@
 {
-    "name": "vjs",
+    "name": "vts",
     "version": "0.0.1",
-    "description": "helper for javascript vanilla js",
+    "description": "helper for typescript vanilla ts",
     "main": "src/index.js",
     "scripts": {
         "test": "test",
@@ -17,7 +17,8 @@
     "keywords": [
         "helper",
         "vanilla",
-        "javascript"
+        "javascript",
+        "typescript"
     ],
     "author": "Alberto Delgado",
     "license": "ISC",

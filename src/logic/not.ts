@@ -11,4 +11,4 @@
  *      v.not(true);       //=>  false
  *      v.not(false);      //=> true
  */
-export const not = (a: boolean) => !a;
+export const not = (a?: boolean) => !a;
