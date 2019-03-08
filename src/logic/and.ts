@@ -13,6 +13,6 @@ const curryAnd = (a: boolean) => (b: boolean) => a && b;
  *      v.and(true)(true);      //=> true
  *      v.and(false)(false);      //=> false
  */
-export function and(a: boolean, b?: boolean) {
+export function and(a?: boolean, b?: boolean) {
     return [and, curryAnd(a), a && b][arguments.length]
 }

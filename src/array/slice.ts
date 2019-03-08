@@ -1,4 +1,4 @@
-const currySlice = (start: number, end: number) => (arr: any) => arr.slice(start || 0, end || arr.length);
+const currySlice = (start: number, end: number) => (arr: any) => arr.slice(start, end);
 /**
  * slice from start to (end || length).
  *
@@ -11,8 +11,8 @@ const currySlice = (start: number, end: number) => (arr: any) => arr.slice(start
  * @example
  *
  *      v.slice(1, 3,[1,2,3,4]);       //=>  [2,3]
- *      v.slice(1, 0)([1,2,3,4]);      //=> [2,3,4]
+ *      v.slice(1, -1)([1,2,3,4]);      //=> [2,3,4]
  */
 export function slice(start: number, end: number, arr?: any) {
-    return [currySlice(start, end), arr.slice(start || 0, end || arr.length)][arguments.length - 2]
+    return [currySlice(start, end), arr.slice(start, end)][arguments.length - 2]
 }
