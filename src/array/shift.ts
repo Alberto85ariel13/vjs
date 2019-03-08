@@ -10,6 +10,6 @@
  *      v.shift('abc'); //=> c
  *      v.shift(['a','b','c']); //=> c
  */
-export function shift(arr: any) {
+export function shift(arr?: any) {
     return [...arr].shift();
 };

@@ -13,6 +13,6 @@ const curryJoin = (separator: string) => (b: any) => [...b].join(separator);
  *      v.join(',')([0,2,4,6]);      //=> 0,2,4,6
  *      v.join('-', 'van');      //=> v-a-n
  */
-export function join(separator: string, b: any) {
+export function join(separator: string, b?: any) {
     return [join, curryJoin(separator), [...b].join(separator)][arguments.length]
 }

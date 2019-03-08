@@ -16,7 +16,7 @@ const curry2CopyWithin = (start: number, end: number) => (target: any) => (array
  *      v.copyWithin(0, 2, 2)([1, 2, 3, 4, 5, 6, 7]);      //=> [ 1, 2, 1, 2, 5, 6, 7 ]
  *      v.copyWithin(3, 6)(1)([1, 2, 3, 4, 5, 6, 7]);      //=> [ 1, 4, 5, 6, 5, 6, 7 ]
  */
-export function copyWithin(start: number, end: number, target: any, array: any) {
+export function copyWithin(start: number, end: number, target?: any, array?: any) {
     return [
         curry2CopyWithin(start, end),
         curry1CopyWithin(start, end, target),

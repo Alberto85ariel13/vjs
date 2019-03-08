@@ -14,6 +14,6 @@ const curryReduce = (f: any, firstValue: any) => (array: any) => [...array].redu
  *      v.reduce(f, 0, [0,2,4,5]);       //=>  11
  *      v.reduce(f,1)([0,2,4,5]);      //=> 12
  */
-export function reduce(f: any, firstValue: any, array: any) {
+export function reduce(f: any, firstValue: any, array?: any) {
     return [curryReduce(f, firstValue), [...array].reduce(f, firstValue)][arguments.length - 2]
 }

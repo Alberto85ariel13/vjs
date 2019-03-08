@@ -10,6 +10,6 @@
  *      v.reverse('abc'); //=> ['c','b','a']
  *      v.reverse([1,2,3]); //=> [3,2,1]
  */
-export function reverse(arr: any) {
+export function reverse(arr?: any) {
     return [...arr].reverse();
 };

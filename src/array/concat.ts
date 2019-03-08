@@ -12,6 +12,6 @@ const curryConcat = (a: any) => (b: any) => a.concat(b);
  *      v.concat('van', 'illa');       //=>  vanilla
  *      v.concat(['v','a','n'])(['i','l']);      //=> ['v','a','n','i','l']
  */
-export function concat(a: any, b: any) {
+export function concat(a?: any, b?: any) {
     return [concat, curryConcat(a), a.concat(b)][arguments.length]
 }

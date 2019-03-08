@@ -14,6 +14,6 @@ const curryEvery = (f: any) => (b: any) => [...b].every(f);
  *      v.every(f, [0,2,4,6]);      //=> true
  *      v.every(f, [1,3,9,5]);      //=> false
  */
-export function every(f: any, b: any) {
+export function every(f: any, b?: any) {
     return [every, curryEvery(f), [...b].every(f)][arguments.length]
 }

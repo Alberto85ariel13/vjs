@@ -10,6 +10,6 @@
  *      v.pop('abc'); //=> c
  *      v.pop(['a','b','c']); //=> c
  */
-export function pop(arr: any) {
+export function pop(arr?: any) {
     return [...arr].pop();
 };

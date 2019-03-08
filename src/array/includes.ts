@@ -13,6 +13,6 @@ const curryIncludes = (a: any) => (b: any) => b.includes(a);
  *      v.includes('v')(['i','l']);      //=> false
  *      v.includes('v')(['i','l','v']);      //=> true
  */
-export function includes(a: any, b: any) {
+export function includes(a?: any, b?: any) {
     return [includes, curryIncludes(a), b.includes(a)][arguments.length]
 }

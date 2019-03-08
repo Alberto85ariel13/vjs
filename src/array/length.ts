@@ -9,6 +9,6 @@
  *
  *      v.length('abc'); //=> 3
  */
-export function length(arr: any) {
+export function length(arr?: any) {
     return [...arr].length;
 };

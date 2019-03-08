@@ -13,6 +13,6 @@ const curryOr = (a: boolean) => (b: boolean) => a || b;
  *      v.or(true)(true);      //=> true
  *      v.or(false)(false);      //=> false
  */
-export function or(a: boolean, b: boolean) {
+export function or(a?: boolean, b?: boolean) {
     return [or, curryOr(a), a || b][arguments.length]
 }

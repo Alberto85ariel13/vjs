@@ -14,6 +14,6 @@ const curryReduceRight = (f: any, firstValue: any) => (array: any) => [...array]
  *      v.reduceRight(f, 0, [0,2,4,5]);       //=>  11
  *      v.reduceRight(f,1)([0,2,4,5]);      //=> 12
  */
-export function reduceRight(f: any, firstValue: any, array: any) {
+export function reduceRight(f: any, firstValue: any, array?: any) {
     return [curryReduceRight(f, firstValue), [...array].reduceRight(f, firstValue)][arguments.length - 2]
 }

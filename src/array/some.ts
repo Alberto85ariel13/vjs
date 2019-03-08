@@ -14,6 +14,6 @@ const currySome = (f: any) => (b: any) => [...b].some(f);
  *      v.some(f(6), [0,2,4,6]);      //=> true
  *      v.some(f(10), [1,3,9,5]);      //=> false
  */
-export function some(f: any, b: any) {
+export function some(f: any, b?: any) {
     return [some, currySome(f), [...b].some(f)][arguments.length]
 }
