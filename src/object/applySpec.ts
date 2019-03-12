@@ -9,7 +9,7 @@ const curryApply = (mapping: Object) => (obj: Object) =>
  *
  * @func
  * @sig {object} -> {object} -> {object}
- * @param props
+ * @param mapping
  * @param obj
  * @return object
  * @example
