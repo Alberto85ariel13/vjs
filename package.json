@@ -2,17 +2,17 @@
     "name": "vts",
     "version": "0.0.1",
     "description": "helper for typescript vanilla ts",
-    "main": "src/index.js",
+    "main": "src/index.ts",
     "scripts": {
-        "test": "test",
+        "test": "ts-node __tests__/index.ts",
         "build": "tsc"
     },
     "engines": {
-        "node": "=8.x.x"
+        "node": ">=8.x.x"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Alberto85ariel13/vjs.git"
+        "url": "git+https://github.com/mayo84/vts.git"
     },
     "keywords": [
         "helper",
@@ -23,11 +23,11 @@
     "author": "Alberto Delgado",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Alberto85ariel13/vjs/issues"
+        "url": "https://github.com/mayo84/vts/issues"
     },
-    "homepage": "https://github.com/Alberto85ariel13/vjs#readme",
-    "dependencies": {
-        "ts-node": "8.0.3",
-        "typescript": "3.3.3333"
+    "homepage": "https://github.com/mayo84/vts#readme",
+    "devDependencies": {
+        "ts-node": "^7.0.1",
+        "typescript": "^3.1.6"
     }
 }
