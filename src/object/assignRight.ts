@@ -1,4 +1,6 @@
-const curryAssign = (obj1: Object) => (obj2: Object) => Object.assign(obj1, obj2)
+import { omitNull } from "./omitNull";
+
+const curryAssign = (obj1: Object) => (obj2: Object) => Object.assign(obj1, omitNull(obj2))
 /**
  * merge deep right
  *
