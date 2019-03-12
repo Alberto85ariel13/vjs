@@ -1,4 +1,4 @@
-const curryConcat = (a: any) => (b: any) => a.concat(b);
+const curryConcat = (a: any) => (b: any) => b.concat(a);
 /**
  * concat two values.
  *
@@ -9,8 +9,8 @@ const curryConcat = (a: any) => (b: any) => a.concat(b);
  * @return {array | string}
  * @example
  *
- *      v.concat('van', 'illa');       //=>  vanilla
- *      v.concat(['v','a','n'])(['i','l']);      //=> ['v','a','n','i','l']
+ *      v.concat('illa','van');       //=>  vanilla
+ *      v.concat(['i','l'])(['v','a','n']);      //=> ['v','a','n','i','l']
  */
 export function concat(a?: any, b?: any) {
     return [concat, curryConcat(a), a.concat(b)][arguments.length]
