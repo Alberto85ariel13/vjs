@@ -4,7 +4,7 @@
     "description": "helper for typescript vanilla ts",
     "main": "src/index.js",
     "scripts": {
-        "test": "mocha -r ts-node/register test/**/*.spec.ts",
+        "test": "mocha -r ts-node/register tests/**/*.spec.ts",
         "build": "tsc"
     },
     "engines": {
