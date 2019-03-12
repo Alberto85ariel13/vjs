@@ -1,5 +1,4 @@
-const curry1CopyWithin = (start: number, end: number, target: any) => (array: any) => [...array].copyWithin(target, start, end);
-const curry2CopyWithin = (start: number, end: number) => (target: any) => (array: any) => [...array].copyWithin(target, start, end);
+const curryCopyWithin = (start: number, end: number) => (target: number) => (array: any) => [...array].copyWithin(target, start, end);
 /**
  * copy slice from start to end in target array.
  *
@@ -16,10 +15,10 @@ const curry2CopyWithin = (start: number, end: number) => (target: any) => (array
  *      v.copyWithin(0, 2, 2)([1, 2, 3, 4, 5, 6, 7]);      //=> [ 1, 2, 1, 2, 5, 6, 7 ]
  *      v.copyWithin(3, 6)(1)([1, 2, 3, 4, 5, 6, 7]);      //=> [ 1, 4, 5, 6, 5, 6, 7 ]
  */
-export function copyWithin(start: number, end: number, target?: any, array?: any) {
+export function copyWithin(start: number, end: number, target?: number, array?: any): any {
     return [
-        curry2CopyWithin(start, end),
-        curry1CopyWithin(start, end, target),
-        [...array].copyWithin(target, start, end)
+        curryCopyWithin(start, end),
+        curryCopyWithin(start, end)(target),
+        array && curryCopyWithin(start, end)(target)(array)
     ][arguments.length - 2]
 }

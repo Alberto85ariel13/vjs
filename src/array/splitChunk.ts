@@ -21,5 +21,5 @@ const curryChunk = (chunkSize: number) => (array: any) => {
  *      v.splitChunk(3)([1,5,4,6]);      //=> [[1,5,4],[6]]
  */
 export function splitChunk(chunkSize?: number, array?: any) {
-    return [splitChunk, curryChunk(chunkSize), curryChunk(chunkSize)(array)][arguments.length]
+    return [splitChunk, curryChunk(chunkSize), array && curryChunk(chunkSize)(array)][arguments.length]
 }

@@ -14,6 +14,6 @@ const curryFindIndex = (f: any) => (b: any) => [...b].findIndex(f);
  *      v.findIndex(f)([1,5,4,6]);      //=> 3
  *      v.findIndex(f, [1,3,9,5]);      //=> -1
  */
-export function findIndex(f: any, b?: any) {
-    return [findIndex, curryFindIndex(f), [...b].findIndex(f)][arguments.length]
+export function findIndex(f: any, b?: any): any {
+    return [findIndex, curryFindIndex(f), b && [...b].findIndex(f)][arguments.length]
 }

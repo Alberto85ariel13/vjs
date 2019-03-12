@@ -15,6 +15,6 @@ const curryPush = (a: any) => (b: any) => base(a, b)
  *
  *      v.push(['n','l'])(['v','a']);      //=> ['v','a','n','l']
  */
-export function push(a?: any, b?: any) {
-    return [push, curryPush(a), base(a, b)][arguments.length]
+export function push(a?: any, b?: any): any {
+    return [push, curryPush(a), b && base(a, b)][arguments.length]
 }

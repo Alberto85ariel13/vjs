@@ -9,6 +9,6 @@
  *
  *      v.flat([4, 8, [3, [4, 4]], undefined, [6]]); //=> [ 4, 8, 3, 4, 4, undefined, 6 ]
  */
-export function flat(arr?:any[]) {
+export function flat(arr?: any[]): any {
     return arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(flat(val)) : acc.concat(val), []);
 }

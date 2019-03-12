@@ -15,6 +15,6 @@ const curryUnshift = (a: any) => (b: any) => base(a, b)
  *
  *      v.unshift(['n','l'])(['v','a']);      //=> ['n','l','v','a']
  */
-export function unshift(a?: any, b?: any) {
-    return [unshift, curryUnshift(a), base(a, b)][arguments.length]
+export function unshift(a?: any, b?: any): any {
+    return [unshift, curryUnshift(a), b && base(a, b)][arguments.length]
 }

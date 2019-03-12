@@ -1,5 +1,4 @@
-const curry1Fill = (start: number, end: number, value: any) => (array: any) => [...array].fill(value, start, end);
-const curry2Fill = (start: number, end: number) => (value: any) => (array: any) => [...array].fill(value, start, end);
+const curryFill = (start: number, end: number) => (value: any) => (array: any[]) => [...array].fill(value, start, end);
 /**
  * [...array].fill(value, start, end)
  *
@@ -16,10 +15,10 @@ const curry2Fill = (start: number, end: number) => (value: any) => (array: any) 
  *      v.fill(0, 2, 2)([1, 2, 3, 4, 5, 6, 7]);      //=> [ 2, 2, 3, 4, 5, 6, 7 ]
  *      v.fill(3, 6)(1)([1, 2, 3, 4, 5, 6, 7]);      //=> [ 1, 4, 5, 1, 1, 1, 7 ]
  */
-export function fill(start: number, end: number, value?: any, array?: any) {
+export function fill(start: number, end: number, value?: any, array?: any): any {
     return [
-        curry2Fill(start, end),
-        curry1Fill(start, end, value),
-        [...array].fill(value, start, end)
+        curryFill(start, end),
+        curryFill(start, end)(value),
+        array && [...array].fill(value, start, end)
     ][arguments.length - 2]
 }
