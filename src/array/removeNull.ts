@@ -9,5 +9,5 @@
  *
  *      v.removeNull(['', 0, 1, 'dd', null, undefined, NaN, {},[]]); //=> [ '', 0, 1, 'dd', {}, [] ]
  */
-export const removeNull = (arr?: any) => arr.filter(val => val === 0 || val === '' || Boolean(val))
+export const removeNull = (arr?: any) => arr.filter(val => val === 0 || val === '' || val === false || Boolean(val))
 
