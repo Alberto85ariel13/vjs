@@ -4,7 +4,7 @@
     "description": "helper for typescript vanilla ts",
     "main": "src/index.js",
     "scripts": {
-        "test": "test",
+        "test": "mocha -r ts-node/register test/**/*.spec.ts",
         "build": "tsc"
     },
     "engines": {
@@ -29,5 +29,11 @@
     "dependencies": {
         "ts-node": "8.0.3",
         "typescript": "3.3.3333"
+    },
+    "devDependencies": {
+        "@types/chai": "4.1.7",
+        "@types/mocha": "5.2.6",
+        "chai": "4.2.0",
+        "mocha": "6.0.2"
     }
 }

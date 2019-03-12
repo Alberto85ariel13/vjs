@@ -8,7 +8,6 @@
  * @return {Function} A Function :: value -> value.
  * @example
  *
- *      const f =v.identity(true);
- *      f(); //=> true
+ *      v.identity(true); //=> true
  */
 export const identity = (value?: any) => value;

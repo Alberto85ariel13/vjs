@@ -1,7 +1,7 @@
 import { compose } from '../utilities/compose';
 import { filter } from './filter';
-import { eq } from '../logic/eq';
-import { not } from '../logic/not';
+import { eq } from '../utilities/eq';
+import { not } from '../utilities/not';
 /**
  * Return array removed empty value.
  *
