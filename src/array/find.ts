@@ -14,6 +14,6 @@ const curryFind = (f: any) => (b: any) => [...b].find(f);
  *      v.find(f)([1,5,4,6]);      //=> 4
  *      v.find(f, [1,3,9,5]);      //=> undefined
  */
-export function find(f: any, b?: any) {
-    return [find, curryFind(f), [...b].find(f)][arguments.length]
+export function find(f: any, b?: any): any {
+    return [find, curryFind(f), b && [...b].find(f)][arguments.length]
 }
