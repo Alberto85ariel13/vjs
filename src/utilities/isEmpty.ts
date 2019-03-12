@@ -1,4 +1,4 @@
-import { eq } from "../logic/eq";
+import { eq } from "./eq";
 
 /**
  * Returns val is Empty
