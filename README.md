@@ -1,2 +1,4 @@
 # vjs
-helper vanilla js
+helper vanilla ts
+
+

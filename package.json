@@ -26,11 +26,10 @@
         "url": "https://github.com/Alberto85ariel13/vjs/issues"
     },
     "homepage": "https://github.com/Alberto85ariel13/vjs#readme",
-    "dependencies": {
-        "ts-node": "8.0.3",
-        "typescript": "3.3.3333"
-    },
+    "dependencies": {},
     "devDependencies": {
+        "ts-node": "8.0.3",
+        "typescript": "3.3.3333",
         "@types/chai": "4.1.7",
         "@types/mocha": "5.2.6",
         "chai": "4.2.0",
