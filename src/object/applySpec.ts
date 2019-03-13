@@ -17,6 +17,6 @@ const curryApply = (mapping: Object) => (obj: Object) =>
  *      v.curryApply(mapping,{ a: 3, b: 'v', c: [ 1, 2, 3 ], p: 'v' }); //=> {a:8,b:'vanilla'}
  *      v.curryApply(mapping)({ a: 3, b: 'v', c: [ 1, 2, 3 ], p: 'v' }); //=> {a:8,b:'vanilla'}
  */
-export function applySpec(mapping: Object, obj?: Object): Object {
-    return [applySpec, curryApply(mapping), curryApply(mapping)(obj)][arguments.length];
+export function applySpec(mapping: Object, obj?: Object): any {
+    return [applySpec, curryApply(mapping), obj && curryApply(mapping)(obj)][arguments.length];
 }

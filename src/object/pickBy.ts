@@ -11,8 +11,8 @@ const curryPickBy = (f: any) => (obj: Object) => Object.assign({}, ...(Object.ke
  * @return object
  * @example
  *      const containV = v.includes('v')
- *      v.curryPickBy(containV,{ a: 3, b: 'va', c: [ 1, 2, 3 ], p: 'v' }); //=> {b:'va',p:'v'}
+ *      v.pickBy(containV,{ a: 3, b: 'va', c: [ 1, 2, 3 ], p: 'v' }); //=> {b:'va',p:'v'}
  */
-export function pickBy(f?: any, obj?: Object): Object {
-    return [pickBy, curryPickBy(f), curryPickBy(f)(obj)][arguments.length];
+export function pickBy(f?: any, obj?: Object): any {
+    return [pickBy, curryPickBy(f), obj && curryPickBy(f)(obj)][arguments.length];
 }

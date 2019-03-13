@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { concat } from '../../src/array/concat'
 import { unshift } from '../../src/array/unshift'
 
-describe.only('concat & unshift', () => {
+describe('concat & unshift', () => {
 
     it('should return string', () => {
         const f = concat('anilla');
