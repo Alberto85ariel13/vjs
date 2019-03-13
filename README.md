@@ -1,4 +1,3 @@
-# vjs
+# vts
 helper vanilla ts
-
 
