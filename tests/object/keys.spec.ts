@@ -2,7 +2,7 @@ import 'mocha';
 import { expect } from 'chai';
 import { keys } from './../../src/object/keys';
 
-describe.only('keys', () => {
+describe('keys', () => {
 
     it('should return array', () => {
         const f = keys; //=> {a:8,b:'vanilla',c: [ 1, 2, 3 ], p: 'v'}
