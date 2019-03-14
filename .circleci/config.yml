@@ -36,10 +36,6 @@ jobs:
       # run tests!
       - run: npm run test
 
-      - store_artifacts:
-          path: test-results.xml
-          prefix: tests
-
       - store_test_results:
           path: test-results.xml
 
@@ -56,9 +52,12 @@ jobs:
 
 workflows:
   version: 2
-  tagged-build:
+  main:
     jobs:
+      - build
       - publish:
+          requires:
+            - build
           filters:
-            tags:
-              only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              only: master
