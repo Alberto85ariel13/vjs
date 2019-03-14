@@ -26,7 +26,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
+      - run: 
+          name: Install Dependencies
+          command: npm install
 
       - save_cache:
           paths:
@@ -34,7 +36,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm run test
+      - run: 
+          name: Run Tests
+          command: npm run test
 
       - store_test_results:
           path: test-results.xml
@@ -48,7 +52,12 @@ jobs:
     steps:
       - checkout
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-      - run: npm publish
+      - run: 
+          name: Set to Scoped Package
+          command: npm config set scope mayo84
+      - run: 
+          name: Publish NPM Package
+          command: npm publish --access public
 
 workflows:
   version: 2
