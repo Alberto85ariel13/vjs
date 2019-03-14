@@ -1,6 +1,8 @@
 # vts
 helper vanilla ts
 
+[![CircleCI](https://circleci.com/gh/mayo84/vts/tree/master.svg?style=svg)](https://circleci.com/gh/mayo84/vts/tree/master)
+
 # OBJETIVO
 ===============
 basado en utiles como Ramda, lodash y underscore el objetivo de vts es implemetar de manera funcional un util 
