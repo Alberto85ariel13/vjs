@@ -53,9 +53,6 @@ jobs:
       - checkout
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run: 
-          name: Set to Scoped Package
-          command: npm config set scope mayo84
-      - run: 
           name: Publish NPM Package
           command: npm publish --access public
 
