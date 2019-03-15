@@ -26,6 +26,7 @@ import { sort } from './sort'
 import { splitChunk } from './splitChunk'
 import { top } from './top'
 import { unshift } from './unshift'
+import { groupByProp } from './groupByProp'
 export const va = {
     concat,
     copyWithin,
@@ -55,4 +56,5 @@ export const va = {
     splitChunk,
     top,
     unshift,
+    groupByProp,
 }
