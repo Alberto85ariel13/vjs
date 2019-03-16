@@ -13,6 +13,7 @@ import { pick } from './pick'
 import { pickBy } from './pickBy'
 import { prop } from './prop'
 import { values } from './values'
+import { toPlainObj } from './toPlainObj'
 export const vo = {
     applySpec,
     assignAllLeft,
@@ -29,4 +30,5 @@ export const vo = {
     pickBy,
     prop,
     values,
+    toPlainObj,
 }
