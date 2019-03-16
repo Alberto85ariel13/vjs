@@ -1,5 +1,5 @@
 {
-    "name": "vts-helper",
+    "name": "@samsystems/vts-helper",
     "version": "0.1.25",
     "description": "helper for typescript vanilla ts",
     "main": "dist/index.js",
