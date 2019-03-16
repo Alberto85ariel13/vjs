@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "declaration": false,
+        "moduleResolution": "node",
+        "declaration": true,
         "noImplicitAny": false,
         "noUnusedLocals": true,
         "removeComments": true,
@@ -10,13 +11,15 @@
         "experimentalDecorators": true,
         "target": "es6",
         "sourceMap": true,
-        "allowJs": true,
-        "outDir": "./dist"
+        "allowJs": false,
+        "outDir": "./dist",
+        "esModuleInterop": true
     },
     "include": [
-        "src/**/*", "jsconfig.json"
+        "src/**/*"
     ],
     "exclude": [
         "node_modules",
+        "dist"
     ]
 }
