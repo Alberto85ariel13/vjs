@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "module": "commonjs",
+        "moduleResolution": "node",
         "declaration": true,
         "noImplicitAny": false,
         "noUnusedLocals": true,
@@ -11,12 +12,15 @@
         "target": "es6",
         "sourceMap": true,
         "allowJs": false,
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "strict": true,
+        "esModuleInterop": true
     },
     "include": [
-        "src/**/*", "jsconfig.json"
+        "src/**/*"
     ],
     "exclude": [
         "node_modules",
+        "dist"
     ]
 }
