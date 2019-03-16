@@ -1,5 +1,5 @@
 {
-    "name": "vts",
+    "name": "vts-helper",
     "version": "0.0.1",
     "description": "helper for typescript vanilla ts",
     "main": "src/index.js",
