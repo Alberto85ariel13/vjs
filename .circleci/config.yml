@@ -40,6 +40,11 @@ jobs:
           name: Run Tests
           command: npm run test
 
+      # create dist
+      - run: 
+          name: Run Build
+          command: npm run build
+
       - store_test_results:
           path: test-results.xml
 

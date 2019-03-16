@@ -2,7 +2,8 @@
     "name": "vts-helper",
     "version": "0.1.2",
     "description": "helper for typescript vanilla ts",
-    "main": "src/index.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "test": "mocha -r ts-node/register tests/**/*.spec.ts",
         "build": "tsc"
