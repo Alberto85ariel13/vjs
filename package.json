@@ -1,6 +1,6 @@
 {
     "name": "vts-helper",
-    "version": "0.1.28",
+    "version": "0.1.29",
     "description": "helper for typescript vanilla ts",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

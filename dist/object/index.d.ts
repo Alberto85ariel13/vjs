@@ -10,8 +10,8 @@ import { prop } from './prop';
 import { values } from './values';
 export declare const vo: {
     applySpec: typeof applySpec;
-    assignAllLeft: (array: Object[]) => Object;
-    assignAllRight: (array: Object[]) => Object;
+    assignAllLeft: (array: Object[]) => any;
+    assignAllRight: (array: Object[]) => any;
     assignLeft: typeof assignLeft;
     assignRight: typeof assignRight;
     evolve: typeof evolve;

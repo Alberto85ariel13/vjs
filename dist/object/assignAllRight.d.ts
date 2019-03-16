@@ -1,1 +1,1 @@
-export declare const assignAllRight: (array: Object[]) => Object;
+export declare const assignAllRight: (array: Object[]) => any;
