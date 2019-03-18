@@ -1,9 +1,13 @@
 {
     "name": "vts-helper",
     "version": "0.1.29",
-    "description": "helper for typescript vanilla ts",
+    "description": "Vanilla Typescript Helper for Functional Programming",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "files": [
+        "/lib",
+        "README.md"
+    ],
     "scripts": {
         "test": "mocha -r ts-node/register tests/**/*.spec.ts",
         "build": "tsc"
@@ -13,7 +17,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Alberto85ariel13/vjs.git"
+        "url": "git+https://github.com/Alberto85ariel13/vts.git"
     },
     "keywords": [
         "helper",
@@ -24,9 +28,9 @@
     "author": "Alberto Delgado",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Alberto85ariel13/vjs/issues"
+        "url": "https://github.com/Alberto85ariel13/vts/issues"
     },
-    "homepage": "https://github.com/Alberto85ariel13/vjs#readme",
+    "homepage": "https://github.com/Alberto85ariel13/vts#vts-helper",
     "dependencies": {},
     "devDependencies": {
         "ts-node": "8.0.3",
