@@ -2,8 +2,8 @@
     "name": "vts-helper",
     "version": "0.1.29",
     "description": "Vanilla Typescript Helper for Functional Programming",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "files": [
         "/lib",
         "README.md"
