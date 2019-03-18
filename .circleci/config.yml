@@ -40,13 +40,15 @@ jobs:
           name: Run Tests
           command: npm run test
 
+      # run coverage
+      - run:
+          name: Collect Coverage
+          command: COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN npm run coverage
+
       # create dist
       - run: 
           name: Run Build
           command: npm run build
-
-      - store_test_results:
-          path: test-results.xml
 
   publish:
     docker:
