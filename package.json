@@ -9,8 +9,8 @@
         "README.md"
     ],
     "scripts": {
-        "test": "mocha -r ts-node/register tests/**/*.spec.ts",
-        "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+        "test": "nyc mocha --opts ./tests/mocha.opts tests/**/*.spec.ts",
+        "coverage": "nyc report --reporter=text-lcov | coveralls",
         "build": "tsc"
     },
     "engines": {
@@ -40,7 +40,21 @@
         "coveralls": "^3.0.3",
         "mocha": "6.0.2",
         "nyc": "^13.3.0",
+        "source-map-support": "^0.5.11",
         "ts-node": "8.0.3",
         "typescript": "3.3.3333"
+    },
+    "nyc": {
+        "extension": [
+            ".ts"
+        ],
+        "include": [
+            "src"
+        ],
+        "reporter": [
+            "text",
+            "html"
+        ],
+        "all": true
     }
 }
