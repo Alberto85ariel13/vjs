@@ -1,6 +1,7 @@
 {
     "name": "vts-helper",
-    "version": "0.1.29",
+
+    "version": "0.1.31",
     "description": "Vanilla Typescript Helper for Functional Programming",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
@@ -8,6 +9,7 @@
         "/lib",
         "README.md"
     ],
+
     "scripts": {
         "test": "mocha -r ts-node/register tests/**/*.spec.ts",
         "build": "tsc"

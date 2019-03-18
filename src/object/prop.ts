@@ -1,4 +1,4 @@
-const curryProp = (prop: string) => (obj: Object) => obj[prop];
+const curryProp = (prop: string) => (obj: Object) => obj && obj[prop];
 /**
  * value prop of object
  *
