@@ -12,7 +12,7 @@
         "target": "es6",
         "sourceMap": true,
         "allowJs": false,
-        "outDir": "./dist",
+        "outDir": "./lib",
         "esModuleInterop": true
     },
     "include": [
@@ -20,6 +20,6 @@
     ],
     "exclude": [
         "node_modules",
-        "dist"
+        "lib"
     ]
 }
