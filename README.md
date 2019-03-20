@@ -1,7 +1,7 @@
 # vts-helper
 Vanilla Typescript Helper
 
-[![CircleCI](https://circleci.com/gh/mayo84/vts/tree/master.svg?style=svg)](https://circleci.com/gh/mayo84/vts/tree/master)   ![npm](https://img.shields.io/npm/v/vts-helper.svg)
+[![CircleCI](https://circleci.com/gh/mayo84/vts/tree/master.svg?style=svg)](https://circleci.com/gh/mayo84/vts/tree/master)   [![npm]https://www.npmjs.com/package/vts-helper](https://img.shields.io/npm/v/vts-helper.svg)
 
 # PURPOSE
 
