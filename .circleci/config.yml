@@ -2,20 +2,17 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
+
 version: 2
+
+defaults: &defaults
+  working_directory: ~/vts
+  docker:
+    - image: circleci/node:10.15.3
+
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:10.15.3
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+    <<: *defaults
     steps:
       - checkout
 
@@ -35,10 +32,29 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
+      # run tests
       - run: 
           name: Run Tests
           command: npm run test
+
+      # create dist
+      - run: 
+          name: Run Build
+          command: npm run build
+
+      # save dist
+      - persist_to_workspace
+          root: ~/vts
+          paths: .
+
+
+  coverage:
+    <<: *defaults
+
+    steps:
+      # reuse build workspace
+      - attach_to_workspace
+          at: ~/vts
 
       # run coverage
       # needs:
@@ -48,29 +64,36 @@ jobs:
           name: Collect Coverage
           command: npm run coverage
 
-      # create dist
-      - run: 
-          name: Run Build
-          command: npm run build
 
   publish:
-    docker:
-      - image: circleci/node:10.15.3
-
-    working_directory: ~/repo
+    <<: *defaults
 
     steps:
-      - checkout
+      # reuse build workspace
+      - attach_to_workspace
+          at: ~/vts
+
+      # save NPM_TOKEN in npmrc config file
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+
       - run: 
           name: Publish NPM Package
           command: npm publish --access public
+
 
 workflows:
   version: 2
   main:
     jobs:
       - build
+
+      - coverage:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
       - publish:
           requires:
             - build
