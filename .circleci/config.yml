@@ -10,6 +10,12 @@ defaults: &defaults
   docker:
     - image: circleci/node:10.15.3
 
+notify:
+  webhooks:
+    # A list of hook hashes, containing the url field
+    # gitter hook
+    - url: https://webhooks.gitter.im/e/5bc1e7e519dc0430add0
+
 jobs:
   build:
     <<: *defaults
