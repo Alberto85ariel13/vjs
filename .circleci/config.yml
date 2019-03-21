@@ -53,7 +53,7 @@ jobs:
 
     steps:
       # reuse build workspace
-      - attach_to_workspace:
+      - attach_workspace:
           at: ~/vts
 
       # run coverage
@@ -70,7 +70,7 @@ jobs:
 
     steps:
       # reuse build workspace
-      - attach_to_workspace:
+      - attach_workspace:
           at: ~/vts
 
       # save NPM_TOKEN in npmrc config file
