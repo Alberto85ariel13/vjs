@@ -9,6 +9,8 @@ describe('omit & omitEmpty & omitNull', () => {
     it('omit should return object', () => {
         const f = omit(['a', 'b']);
         expect(f({ a: 3, b: 'v', c: [1, 2, 3], p: 'v' })).to.eql({ c: [1, 2, 3], p: 'v' })
+        const v = omit(['a', 'b'], { a: 3, b: 'v', c: [1, 2, 3], p: 'v' });
+        expect(v).to.eql({ c: [1, 2, 3], p: 'v' });
     });
     it('omitEmpty should return object', () => {
         const f = omitEmpty;

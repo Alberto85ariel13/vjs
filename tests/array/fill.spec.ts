@@ -7,6 +7,8 @@ describe('fill', () => {
     it('should return array', () => {
         const f = fill(0, 2, 5);
         expect(f([1, 2, 3, 4, 5, 6, 7])).to.eql([5, 5, 3, 4, 5, 6, 7])
+        const v = fill(0, 2, 5, [1, 2, 3, 4, 5, 6, 7]);
+        expect(v).to.eql([5, 5, 3, 4, 5, 6, 7]);
     });
 
 });

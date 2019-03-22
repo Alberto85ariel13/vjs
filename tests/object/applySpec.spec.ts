@@ -19,6 +19,8 @@ describe('applySpec', () => {
         }
         const f = applySpec(mapping)
         expect(f({ a: 3, b: 'v', c: [1, 2, 3], p: 'v' })).to.eql({ a: 8, b: 'vanilla', c: { r: 6 } })
+        const v = applySpec(mapping, { a: 3, b: 'v', c: [1, 2, 3], p: 'v' });
+        expect(v).to.eql({ a: 8, b: 'vanilla', c: { r: 6 } });
     });
 
 });
