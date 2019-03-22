@@ -10,12 +10,16 @@ describe('assignLeft & assignRight', () => {
         const obj2 = { a: 3, p: 'v' }
         const f = assignLeft(obj1); //=> { a: 1, b: 'v', c: [ 1, 2, 3 ], p: 'v' }
         expect(f(obj2)).to.eql({ a: 1, b: 'v', c: [1, 2, 3], p: 'v' })
+        const v = assignLeft(obj1, obj2); //=> { a: 1, b: 'v', c: [ 1, 2, 3 ], p: 'v' }
+        expect(v).to.eql({ a: 1, b: 'v', c: [1, 2, 3], p: 'v' });
     });
     it('assignRight should return object', () => {
         const obj1 = { a: 1, b: 'v', c: [1, 2, 3] }
         const obj2 = { a: 3, p: 'v' }
-        const f = assignRight; //=> { a: 1, b: 'v', c: [ 1, 2, 3 ], p: 'v' }
-        expect(f(obj1, obj2)).to.eql({ a: 3, b: 'v', c: [1, 2, 3], p: 'v' })
+        const f = assignRight(obj1); //=> { a: 1, b: 'v', c: [ 1, 2, 3 ], p: 'v' }
+        expect(f(obj2)).to.eql({ a: 3, b: 'v', c: [1, 2, 3], p: 'v' });
+        const v = assignRight(obj1, obj2); //=> { a: 1, b: 'v', c: [ 1, 2, 3 ], p: 'v' }
+        expect(v).to.eql({ a: 3, b: 'v', c: [1, 2, 3], p: 'v' });
     });
 
 });

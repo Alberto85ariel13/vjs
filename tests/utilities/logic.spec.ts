@@ -24,6 +24,9 @@ describe('logic', () => {
         it('should returns when true', () => {
             expect(or(true)(true)).to.equal(true);
         });
+        it('should returns when true', () => {
+            expect(or(false)(true)).to.equal(true);
+        });
         it('should returns when false', () => {
             expect(or(false, false)).to.equal(false);
         });
