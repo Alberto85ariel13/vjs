@@ -43,18 +43,5 @@
         "source-map-support": "^0.5.11",
         "ts-node": "8.0.3",
         "typescript": "3.3.3333"
-    },
-    "nyc": {
-        "extension": [
-            ".ts"
-        ],
-        "include": [
-            "src"
-        ],
-        "reporter": [
-            "text",
-            "html"
-        ],
-        "all": true
     }
 }
